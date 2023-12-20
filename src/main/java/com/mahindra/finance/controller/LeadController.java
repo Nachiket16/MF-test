@@ -22,14 +22,12 @@ public class LeadController {
 
     @PostMapping("/create")
     public ResponseEntity<?> createLead(@Valid @RequestBody LeadRequest request){
-        System.out.println("request = " + request);
-        Lead lead = leadServices.createLead(request);
-        return new ResponseEntity<>(new SuccessResponse<>("Success","Created Leads Successfully"), HttpStatus.CREATED);
+        return leadServices.createLead(request);
     }
 
-    @GetMapping("/hello")
-    public String getLead(){
-        return "hello world";
+    @GetMapping("/getByPhone/{mobile}")
+    public ResponseEntity<?> getLeadByMobileNumber(@PathVariable String mobile) {
+        return leadServices.getByMobileNumber(mobile);
     }
 
 }

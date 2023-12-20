@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Lead {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer leadId;
     private String firstName;
     private String middleName;
@@ -22,7 +22,7 @@ public class Lead {
 //    Not using enum as need to define in db first but ideally should be enum
 //    private Gender gender;
     private String gender;
-    private LocalDate DOB;
+    private LocalDate dob;
     private String email;
 
 }
