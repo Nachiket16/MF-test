@@ -30,7 +30,6 @@ public class LeadServices {
             ErrorResponse errorResponse = new ErrorResponse("E10010",errorMessages);
             return new ResponseEntity<>(new FailureResponse("error",errorResponse), HttpStatus.CONFLICT);
         }
-        //WE can use MapStruct, Model mapper or getter setter or constructor based setup
         Lead lead = modelMapper.map(request, Lead.class);
         Lead save = leadRepository.save(lead);
         return new ResponseEntity<>(new SuccessResponse<>("Success","Created Leads Successfully"), HttpStatus.CREATED);

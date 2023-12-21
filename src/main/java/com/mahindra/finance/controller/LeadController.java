@@ -1,13 +1,9 @@
 package com.mahindra.finance.controller;
 
-import com.mahindra.finance.entity.Lead;
 import com.mahindra.finance.model.LeadRequest;
-import com.mahindra.finance.model.SuccessResponse;
 import com.mahindra.finance.service.LeadServices;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
